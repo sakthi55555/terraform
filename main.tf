@@ -13,8 +13,7 @@ terraform {
 provider "azurerm" {
   features {}
 }
-sudo apt-get update
-sudo apt-get install azure-cli
+
 
 resource "azurerm_resource_group" "rg" {
   name     = "myTFResourceGroup"
