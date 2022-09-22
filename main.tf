@@ -10,9 +10,6 @@ terraform {
   required_version = ">= 1.1.0"
 }
 
-provider "azurerm" {
-  features {}
-}
 resource "null_resource" "install_azure_cli" {
   provisioner "local-exec" {
     command = <<EOH
@@ -33,6 +30,10 @@ resource "null_resource" "install_azure_cli" {
     interpreter = ["/bin/bash", "-c"]
 }
 }
+provider "azurerm" {
+  features {}
+}
+
 
 resource "azurerm_resource_group" "rg" {
   name     = "myTFResourceGroup"
