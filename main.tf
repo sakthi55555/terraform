@@ -32,6 +32,7 @@ resource "null_resource" "install_azure_cli" {
 
     interpreter = ["/bin/bash", "-c"]
 }
+}
 
 resource "azurerm_resource_group" "rg" {
   name     = "myTFResourceGroup"
