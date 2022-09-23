@@ -19,7 +19,7 @@ resource "null_resource" "install_azure_cli" {
 
     interpreter = ["/bin/bash", "-c"]
 }
-
+}
 terraform {
   required_providers {
     azurerm = {
